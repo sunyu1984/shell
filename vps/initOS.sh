@@ -296,11 +296,11 @@ function modifyLoinInfo() {
     fi
     cd $INFO_PATH
     if [ ! -f "$INFO_FILE" ]; then
-        wget https://raw.githubusercontent.com/yingsf/myshs/master/dymotd
+        wget https://raw.githubusercontent.com/sunyu1984/resources/motd/dymotd
         chmod +x $INFO_FILE
     else
         mv $INFO_FILE $INFO_FILE"_bak"
-        wget https://raw.githubusercontent.com/yingsf/myshs/master/dymotd
+        wget https://raw.githubusercontent.com/sunyu1984/resources/motd/dymotd
         chmod +x $INFO_FILE
     fi
     
