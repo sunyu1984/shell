@@ -15,7 +15,11 @@
 # Author : Yingshf
 # Notice : function return 66 is ok,return 99 is fail.
 # ------------------------------------------------------------------
-
+# ChangeLog
+# 2020-05-11
+# Update to CentOS 8 by Sun,Yu
+#
+#
 INFO_PATH="/usr/src/scripts"
 INFO_FILE="/usr/src/scripts/dymotd"
 PROFILE_FILE="/etc/profile"
@@ -87,19 +91,19 @@ function installLsb_release ()
     return 66
 }
 
-# 通过lsb_release检查系统是否为Centos7 
+# 通过lsb_release检查系统是否为Centos8
 function checkOSByLsb_release ()
 {
     release=`lsb_release -si`
     version=`lsb_release -rs | cut -f1 -d.`
 
-    if [[ $release = "CentOS" ]] && [[ $version = "7" ]]; then
+    if [[ $release = "CentOS" ]] && [[ $version = "8" ]]; then
         return 66
     fi
     return 99
 }
 
-# 通过检查指定文件判断系统是否为Centos7
+# 通过检查指定文件判断系统是否为Centos8
 function checkOSByFile()
 {
     local release=""
@@ -122,7 +126,7 @@ function checkOSByFile()
     
     main_ver=${version%%.*}
 
-    if [ "$main_ver" != "7" ] || [ "$release" != "centos" ]; then
+    if [ "$main_ver" != "8" ] || [ "$release" != "centos" ]; then
         return 99
     fi
     return 66
@@ -167,7 +171,7 @@ function initMain ()
             releaseSts=`echo $?`
         fi
         if [ $releaseSts != "66" ]; then
-            echo -e "\nScript only supports Centos7, exit."
+            echo -e "\nScript only supports Centos8, exit."
             exit 99
         fi
     else
@@ -186,13 +190,6 @@ function addYumRepo ()
 {
     if [[ ! -f /etc/yum.repos.d/epel.repo ]]; then
         yum install epel-release -y >/dev/null 2>&1 || errExit "Add EPEL fail, exit"
-    fi
-    if [[ ! -f /etc/yum.repos.d/elrepo.repo ]]; then
-        yes | rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org >/dev/null 2>&1 || errExit "Add ElRepo fail, exit"
-        yes | rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm >/dev/null 2>&1 || errExit "Add ElRepo fail, exit"
-    fi
-    if [[ ! -f /etc/yum.repos.d/ius.repo ]]; then
-        yum install https://centos7.iuscommunity.org/ius-release.rpm -y >/dev/null 2>&1 || errExit "Add IUS fail, exit"
     fi
     yum install -y yum-axelget >/dev/null 2>&1 || errExit "Install yum-axelget fail, exit"
     yum install -y net-tools git wget >/dev/null 2>&1 || errExit "Install net-tools git fail, exit"
