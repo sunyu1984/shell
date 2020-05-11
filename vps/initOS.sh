@@ -18,8 +18,7 @@
 # ChangeLog
 # 2020-05-11
 # Update to CentOS 8 by Sun,Yu
-#
-#
+# ------------------------------------------------------------------
 INFO_PATH="/usr/src/scripts"
 INFO_FILE="/usr/src/scripts/dymotd"
 PROFILE_FILE="/etc/profile"
