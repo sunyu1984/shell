@@ -6,7 +6,7 @@
 # script for initialization, including the following operations : 
 #   1. Close SELinux
 #   2. Add yum repo, include : EPEL, ELRepo
-#   3. Install yum-axelget, net-tools, git, wget
+#   3. Install net-tools, git, wget
 #   4. Install 'oh my zsh', change zsh theme to 'ys'
 #   5. System update by 'yum update'
 #   6. Reboot system
@@ -319,7 +319,7 @@ echo "#############################################################"
 echo "# The following operations will be performed                #"
 echo "#  1. Close SELinux                                         #"
 echo "#  2. Add yum repo, include : EPEL, ELRepo                  #"
-echo "#  3. Install yum-axelget, net-tools, git, wget             #"
+echo "#  3. Install net-tools, git, wget             #"
 echo "#  4. Install 'oh my zsh', change zsh theme to 'ys'         #"
 echo "#  5. Set SSH Key And SSH Login                             #"
 echo "#  6. Add Login info                                        #"
@@ -330,7 +330,7 @@ echo -e "Checking environment.........................................\n"
 initMain
 echo -e "Closing SELinux..............................................\n"
 closeSELinux
-echo -e "Add Yum Repo And Install yum-axelget, net-tools, git, wget...\n"
+echo -e "Add Yum Repo And Install net-tools, git, wget...\n"
 addYumRepo
 echo -e "Installing Oh My Zsh.........................................\n"
 installOhMyZsh
