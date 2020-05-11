@@ -190,7 +190,6 @@ function addYumRepo ()
     if [[ ! -f /etc/yum.repos.d/epel.repo ]]; then
         yum install epel-release -y >/dev/null 2>&1 || errExit "Add EPEL fail, exit"
     fi
-    yum install -y yum-axelget >/dev/null 2>&1 || errExit "Install yum-axelget fail, exit"
     yum install -y net-tools git wget >/dev/null 2>&1 || errExit "Install net-tools git fail, exit"
 }
 
