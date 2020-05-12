@@ -43,8 +43,8 @@ $COLOR_COLUMN- Current user$RESET_COLORS........: $COLOR_VALUE $USER $RESET_COLO
 $COLOR_COLUMN- CPU usage$RESET_COLORS...........: $COLOR_VALUE $LOAD1 - $LOAD5 - $LOAD15 (1-5-15 min) $RESET_COLORS
 $COLOR_COLUMN- Memory used$RESET_COLORS.........: $COLOR_VALUE $MEMORY (total-free-used) $RESET_COLORS
 $COLOR_COLUMN- Swap in use$RESET_COLORS.........: $COLOR_VALUE $SWAP (total-used-free) MB $RESET_COLORS
-$COLOR_COLUMN- Processes$RESET_COLORS...........: $COLOR_VALUE $PSA 个进程正在运行 $RESET_COLORS
-$COLOR_COLUMN- System uptime$RESET_COLORS.......: $COLOR_VALUE $upDays 天 $upHours 小时 $upMins 分钟 $upSecs 秒 $RESET_COLORS
+$COLOR_COLUMN- Processes$RESET_COLORS...........: $COLOR_VALUE $PSA Running Processes $RESET_COLORS
+$COLOR_COLUMN- System uptime$RESET_COLORS.......: $COLOR_VALUE $upDays Days $upHours Hours $upMins Minites $upSecs Seconds $RESET_COLORS
 $COLOR_COLUMN- Disk space All$RESET_COLORS......: $COLOR_VALUE $DISK $RESET_COLORS
 $COLOR_COLUMN- Disk space Avail$RESET_COLORS....: $COLOR_VALUE $ROOT $RESET_COLORS
 ===========================================================================

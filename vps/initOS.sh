@@ -309,6 +309,8 @@ function modifyLoinInfo() {
     echo -e "\n登录信息放在/usr/src/scripts/dymotd文件中,请自行查看相关内容"
 }
 
+
+
 # -------------------------------
 # Begin InitCentos
 # -------------------------------
@@ -317,24 +319,24 @@ clear
 echo ""
 echo "#############################################################"
 echo "# The following operations will be performed                #"
-echo "#  1. Close SELinux                                         #"
-echo "#  2. Add yum repo, include : EPEL, ELRepo                  #"
-echo "#  3. Install net-tools, git, wget             #"
+echo "#  1. #Close SELinux                                         #"
+echo "#  2. Add yum repo, include : EPEL                          #"
+echo "#  3. Install net-tools, git, wget                          #"
 echo "#  4. Install 'oh my zsh', change zsh theme to 'ys'         #"
-echo "#  5. Set SSH Key And SSH Login                             #"
+echo "#  5. #Set SSH Key And SSH Login                             #"
 echo "#  6. Add Login info                                        #"
 echo "#############################################################"
 echo ""
 
 echo -e "Checking environment.........................................\n"
 initMain
-echo -e "Closing SELinux..............................................\n"
-closeSELinux
+# echo -e "Closing SELinux..............................................\n"
+# closeSELinux
 echo -e "Add Yum Repo And Install net-tools, git, wget...\n"
 addYumRepo
 echo -e "Installing Oh My Zsh.........................................\n"
 installOhMyZsh
-echo -e "Set SSH Key And SSH Login....................................\n"
+# echo -e "Set SSH Key And SSH Login....................................\n"
 # sshLogin
 echo -e "Add Login info...............................................\n"
 modifyLoinInfo
