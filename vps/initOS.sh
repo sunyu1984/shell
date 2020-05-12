@@ -54,7 +54,7 @@ function findCmd ()
 function netStatus ()
 {
     timeout=5
-    targetUrl=baidu.com
+    targetUrl=google.com
     retCode=`curl -I -s --connect-timeout $timeout $targetUrl -w %{http_code} | tail -n1`
 
     if [ "x$retCode" = "x200" ]; then
@@ -335,6 +335,6 @@ addYumRepo
 echo -e "Installing Oh My Zsh.........................................\n"
 installOhMyZsh
 echo -e "Set SSH Key And SSH Login....................................\n"
-sshLogin
+# sshLogin
 echo -e "Add Login info...............................................\n"
 modifyLoinInfo
