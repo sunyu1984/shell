@@ -47,6 +47,7 @@ Temporary Items
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.history/
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
