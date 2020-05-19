@@ -53,7 +53,7 @@ function findCmd ()
 # 检查网络是否连通
 function netStatus ()
 {
-    timeout=5
+    timeout=50
     targetUrl=baidu.com
     retCode=`curl -I -s --connect-timeout $timeout $targetUrl -w %{http_code} | tail -n1`
 
@@ -319,19 +319,19 @@ clear
 echo ""
 echo "#############################################################"
 echo "# The following operations will be performed                #"
-echo "#  1. #Close SELinux                                         #"
+echo "#  1. #Close SELinux                                        #"
 echo "#  2. Add yum repo, include : EPEL                          #"
 echo "#  3. Install net-tools, git, wget                          #"
 echo "#  4. Install 'oh my zsh', change zsh theme to 'ys'         #"
-echo "#  5. #Set SSH Key And SSH Login                             #"
+echo "#  5. #Set SSH Key And SSH Login                            #"
 echo "#  6. Add Login info                                        #"
 echo "#############################################################"
 echo ""
 
 echo -e "Checking environment.........................................\n"
 initMain
-# echo -e "Closing SELinux..............................................\n"
-# closeSELinux
+echo -e "Closing SELinux..............................................\n"
+closeSELinux
 echo -e "Add Yum Repo And Install net-tools, git, wget...\n"
 addYumRepo
 echo -e "Installing Oh My Zsh.........................................\n"
