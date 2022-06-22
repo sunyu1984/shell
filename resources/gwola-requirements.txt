@@ -12,7 +12,7 @@ idna==2.7
 lxml==4.2.5
 msgpack==0.5.6
 numexpr==2.6.8
-numpy==1.15.1
+numpy==1.22.0
 oauth2client==4.1.2
 pandas==0.23.4
 pyasn1==0.4.4
